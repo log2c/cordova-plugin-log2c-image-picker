@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+
+dependencies {
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.4.6'
+    implementation 'com.github.bumptech.glide:glide:4.+'
+    implementation 'com.google.code.gson:gson:2.+'
+}
