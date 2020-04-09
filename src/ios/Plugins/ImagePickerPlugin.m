@@ -3,9 +3,9 @@
 
 #import <TZImagePickerController/TZImagePickerController.h>
 #import "NSDictionary+SYSafeConvert.h"
-#import "TZImageManager.h"
+#import <TZImagePickerController/TZImageManager.h>
 #import "NSDictionary+SYSafeConvert.h"
-#import "TZImageCropManager.h"
+#import <TZImagePickerController/TZImageCropManager.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface ImagePickerPlugin ()
