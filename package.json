@@ -36,5 +36,5 @@
     "type": "git",
     "url": "git+https://github.com/log2c/cordova-plugin-log2c-image-picker.git"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
