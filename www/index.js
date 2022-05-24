@@ -6,7 +6,8 @@ var exec = require('cordova/exec');
 const defaultOptions = {
     allowPickingImage: true,
     imageCount: 6,             // 最大选择图片数目，默认6
-    isRecordSelected: false,   // 是否已选图片
+    isRecordSelected: false,   // 是否已选图片(iOS Only, Android use selectionData
+    selectionData: [], // 已选中图片、视频的 uri
     isCamera: true,            // 是否允许用户在内部拍照，默认true
     isCrop: false,             // 是否允许裁剪，默认false, imageCount 为1才生效
     CropW: ~~(window.innerWidth * 0.6),    // 裁剪宽度，默认屏幕宽度60%

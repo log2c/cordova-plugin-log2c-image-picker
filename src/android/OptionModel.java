@@ -1,6 +1,9 @@
 package com.log2c.cordova.plugin.imagepicker;
 
+import java.util.List;
+
 public class OptionModel {
+    private List<String> selectionData; // 已选中图片、视频的 uri
     private int imageCount;
     private boolean isCamera;
     private boolean isCrop;
@@ -11,14 +14,20 @@ public class OptionModel {
     private boolean showCropFrame;
     private boolean showCropGrid;
     private boolean compress;
-    private boolean freeStyleCropEnabled;
     private boolean rotateEnabled;
     private boolean scaleEnabled;
     private int minimumCompressSize;
     private int quality;
     private boolean isWeChatStyle;
-    private boolean isRecordSelected;
     private boolean enableBase64;
+
+    public List<String> getSelectionData() {
+        return selectionData;
+    }
+
+    public void setSelectionData(List<String> selectionData) {
+        this.selectionData = selectionData;
+    }
 
     public int getImageCount() {
         return imageCount;
@@ -100,14 +109,6 @@ public class OptionModel {
         this.compress = compress;
     }
 
-    public boolean isFreeStyleCropEnabled() {
-        return freeStyleCropEnabled;
-    }
-
-    public void setFreeStyleCropEnabled(boolean freeStyleCropEnabled) {
-        this.freeStyleCropEnabled = freeStyleCropEnabled;
-    }
-
     public boolean isRotateEnabled() {
         return rotateEnabled;
     }
@@ -148,14 +149,6 @@ public class OptionModel {
         isWeChatStyle = weChatStyle;
     }
 
-    public boolean isRecordSelected() {
-        return isRecordSelected;
-    }
-
-    public void setRecordSelected(boolean recordSelected) {
-        isRecordSelected = recordSelected;
-    }
-
     public boolean isEnableBase64() {
         return enableBase64;
     }
@@ -177,13 +170,11 @@ public class OptionModel {
                 ", showCropFrame=" + showCropFrame +
                 ", showCropGrid=" + showCropGrid +
                 ", compress=" + compress +
-                ", freeStyleCropEnabled=" + freeStyleCropEnabled +
                 ", rotateEnabled=" + rotateEnabled +
                 ", scaleEnabled=" + scaleEnabled +
                 ", minimumCompressSize=" + minimumCompressSize +
                 ", quality=" + quality +
                 ", isWeChatStyle=" + isWeChatStyle +
-                ", isRecordSelected=" + isRecordSelected +
                 ", enableBase64=" + enableBase64 +
                 '}';
     }
