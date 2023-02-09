@@ -13,6 +13,7 @@ cordova plugin add cordova-plugin-log2c-image-picker
 
 ## Usage
 
+```javascript
 const options = {
     imageCount: 1,             // 最大选择图片数目，默认1
     isCamera: true,            // 是否允许用户在内部拍照，默认true
@@ -23,9 +24,10 @@ const options = {
     enableBase64: true,       // 是否返回base64编码
 };
 
-
 // 直接调用拍照
 ImagePicker.openCamera(options,successCallback,errorCallback);
 
 // 调用图片选择
 ImagePicker.showImagePicker(options,successCallback,errorCallback);
+
+```
