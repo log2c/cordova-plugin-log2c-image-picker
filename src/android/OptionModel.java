@@ -1,181 +1,90 @@
 package com.log2c.cordova.plugin.imagepicker;
 
-import java.util.List;
+import java.util.Objects;
 
 public class OptionModel {
-    private List<String> selectionData; // 已选中图片、视频的 uri
-    private int imageCount;
-    private boolean isCamera;
+    private int imageCount = 1;
+    private boolean isCamera = true;
     private boolean isCrop;
-    private int CropW;
-    private int CropH;
-    private boolean isGif;
-    private boolean showCropCircle;
-    private boolean showCropFrame;
-    private boolean showCropGrid;
-    private boolean compress;
-    private boolean rotateEnabled;
-    private boolean scaleEnabled;
-    private int minimumCompressSize;
-    private int quality;
-    private boolean isWeChatStyle;
-    private boolean enableBase64;
+    private boolean compress = true;
+    private int minimumCompressSize = 100;
+    private int quality = 90;
+    private boolean enableBase64 = true;
 
-    public List<String> getSelectionData() {
-        return selectionData;
-    }
-
-    public void setSelectionData(List<String> selectionData) {
-        this.selectionData = selectionData;
-    }
 
     public int getImageCount() {
         return imageCount;
     }
 
-    public void setImageCount(int imageCount) {
+    public OptionModel setImageCount(int imageCount) {
         this.imageCount = imageCount;
+        return this;
     }
 
     public boolean isCamera() {
         return isCamera;
     }
 
-    public void setCamera(boolean camera) {
+    public OptionModel setCamera(boolean camera) {
         isCamera = camera;
+        return this;
     }
 
     public boolean isCrop() {
         return isCrop;
     }
 
-    public void setCrop(boolean crop) {
+    public OptionModel setCrop(boolean crop) {
         isCrop = crop;
-    }
-
-    public int getCropW() {
-        return CropW;
-    }
-
-    public void setCropW(int cropW) {
-        CropW = cropW;
-    }
-
-    public int getCropH() {
-        return CropH;
-    }
-
-    public void setCropH(int cropH) {
-        CropH = cropH;
-    }
-
-    public boolean isGif() {
-        return isGif;
-    }
-
-    public void setGif(boolean gif) {
-        isGif = gif;
-    }
-
-    public boolean isShowCropCircle() {
-        return showCropCircle;
-    }
-
-    public void setShowCropCircle(boolean showCropCircle) {
-        this.showCropCircle = showCropCircle;
-    }
-
-    public boolean isShowCropFrame() {
-        return showCropFrame;
-    }
-
-    public void setShowCropFrame(boolean showCropFrame) {
-        this.showCropFrame = showCropFrame;
-    }
-
-    public boolean isShowCropGrid() {
-        return showCropGrid;
-    }
-
-    public void setShowCropGrid(boolean showCropGrid) {
-        this.showCropGrid = showCropGrid;
+        return this;
     }
 
     public boolean isCompress() {
         return compress;
     }
 
-    public void setCompress(boolean compress) {
+    public OptionModel setCompress(boolean compress) {
         this.compress = compress;
-    }
-
-    public boolean isRotateEnabled() {
-        return rotateEnabled;
-    }
-
-    public void setRotateEnabled(boolean rotateEnabled) {
-        this.rotateEnabled = rotateEnabled;
-    }
-
-    public boolean isScaleEnabled() {
-        return scaleEnabled;
-    }
-
-    public void setScaleEnabled(boolean scaleEnabled) {
-        this.scaleEnabled = scaleEnabled;
+        return this;
     }
 
     public int getMinimumCompressSize() {
         return minimumCompressSize;
     }
 
-    public void setMinimumCompressSize(int minimumCompressSize) {
+    public OptionModel setMinimumCompressSize(int minimumCompressSize) {
         this.minimumCompressSize = minimumCompressSize;
+        return this;
     }
 
     public int getQuality() {
         return quality;
     }
 
-    public void setQuality(int quality) {
+    public OptionModel setQuality(int quality) {
         this.quality = quality;
-    }
-
-    public boolean isWeChatStyle() {
-        return isWeChatStyle;
-    }
-
-    public void setWeChatStyle(boolean weChatStyle) {
-        isWeChatStyle = weChatStyle;
+        return this;
     }
 
     public boolean isEnableBase64() {
         return enableBase64;
     }
 
-    public void setEnableBase64(boolean enableBase64) {
+    public OptionModel setEnableBase64(boolean enableBase64) {
         this.enableBase64 = enableBase64;
+        return this;
     }
 
     @Override
-    public String toString() {
-        return "OptionModel{" +
-                "imageCount=" + imageCount +
-                ", isCamera=" + isCamera +
-                ", isCrop=" + isCrop +
-                ", CropW=" + CropW +
-                ", CropH=" + CropH +
-                ", isGif=" + isGif +
-                ", showCropCircle=" + showCropCircle +
-                ", showCropFrame=" + showCropFrame +
-                ", showCropGrid=" + showCropGrid +
-                ", compress=" + compress +
-                ", rotateEnabled=" + rotateEnabled +
-                ", scaleEnabled=" + scaleEnabled +
-                ", minimumCompressSize=" + minimumCompressSize +
-                ", quality=" + quality +
-                ", isWeChatStyle=" + isWeChatStyle +
-                ", enableBase64=" + enableBase64 +
-                '}';
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        OptionModel that = (OptionModel) o;
+        return imageCount == that.imageCount && isCamera == that.isCamera && isCrop == that.isCrop && compress == that.compress && minimumCompressSize == that.minimumCompressSize && quality == that.quality && enableBase64 == that.enableBase64;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(imageCount, isCamera, isCrop, compress, minimumCompressSize, quality, enableBase64);
     }
 }
