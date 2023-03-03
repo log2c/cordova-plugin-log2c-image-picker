@@ -38,6 +38,19 @@ var ImagePicker = {
             ...options
         }], successCallback, errorCallback);
     },
-    ImagePicker: ImagePicker
+    getPictures: function (successCallback, errorCallback, options) {
+        this.callNative('showImagePicker', [{
+            ...{
+                imageCount: options.maximumImagesCount || defaultOptions.imageCount
+            },
+            ...options
+        }], successCallback, errorCallback);
+    },
+    takePhoto: function (successCallback, errorCallback, options) {
+        this.callNative('openCamera', [{
+            ...defaultOptions,
+            ...options
+        }], successCallback, errorCallback);
+    },
 }
 module.exports = ImagePicker;
