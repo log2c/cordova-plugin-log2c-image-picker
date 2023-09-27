@@ -19,6 +19,7 @@
         <source-file src="src/android/LubanCompressEngine.java" target-dir="src/com/log2c/cordova/plugin/imagepicker" />
         <source-file src="src/android/OptionModel.java" target-dir="src/com/log2c/cordova/plugin/imagepicker" />
         <framework src="build-extras.gradle" custom="true" type="gradleReference" />
+        <resource-file src="aars/easy_photos_20230927.aar" target="libs/easy_photos.aar" />
     </platform>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
