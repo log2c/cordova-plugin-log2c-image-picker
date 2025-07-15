@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-log2c-image-picker" version="2.0.2"
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-log2c-image-picker" version="2.0.3"
     xmlns="http://apache.org/cordova/ns/plugins/1.0">
     <name>Image picker</name>
     <description>Cordova Image picker plugin.</description>
@@ -20,6 +20,7 @@
         <source-file src="src/android/OptionModel.java" target-dir="src/com/log2c/cordova/plugin/imagepicker" />
         <framework src="build-extras.gradle" custom="true" type="gradleReference" />
         <resource-file src="aars/easy_photos_20230927.aar" target="libs/easy_photos.aar" />
+        <resource-file src="aars/Luban-1.1.8.aar" target="libs/Luban-1.1.8.aar" />
     </platform>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
